@@ -1,0 +1,29 @@
+{
+  "name": "electronics-store",
+  "version": "1.0.0",
+  "main": "dist/app.js",
+  "author": "Shubhadeep Halder",
+  "type": "module",
+  "license": "MIT",
+  "description": "This repository contains a Node.js application that implements a checkout system for an electronics store. The application allows scanning items and calculating the total price based on specific pricing rules.",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "yarn run build && nodemon dist/app.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon dist/app.js\""
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.2",
+    "concurrently": "^8.2.0",
+    "nodemon": "^3.0.1",
+    "typescript": "^5.1.6"
+  },
+  "types": "./dist/app.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nextyfine-dev/electronics-store.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nextyfine-dev/electronics-store/issues"
+  },
+  "homepage": "https://github.com/nextyfine-dev/electronics-store#readme"
+}
