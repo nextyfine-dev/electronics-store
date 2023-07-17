@@ -1,4 +1,4 @@
-# Backend TypeScript Assignment
+# Checkout system for an electronics store.
 
 This repository contains a Node.js application that implements a checkout system for an electronics store. The application allows scanning items and calculating the total price based on specific pricing rules.
 
@@ -15,7 +15,7 @@ Follow the instructions below to set up and run the application:
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/nextyfine-dev/electronics-store.git
    ```
 
 2. Install dependencies:\*\*
