@@ -42,8 +42,14 @@ co.scan("buds");
 co.scan("op11");
 co.scan("op11");
 
+const co1 = new Checkout(pricingRules);
+co1.scan("buds");
+co1.scan("op10");
+co1.scan("buds");
+co1.scan("buds");
+
 const total = co.total(); // Solution 1
-const total1 = co.total1(); // Solution 2
+const total1 = co1.total1(); // Solution 2
 
 console.log("Total:", total);
 console.log("Total 1:", total1);

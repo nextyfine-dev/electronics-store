@@ -45,11 +45,10 @@ class Checkout {
     }
 
     // Apply bulk discount if applicable
-    if (
-      bulkItemCount ===
-      this.pricingRules.find((rule) => rule.discount?.type === "bulk")?.discount
-        ?.requiredQuantity
-    ) {
+    const requiredQuantity = this.pricingRules.find(
+      (rule) => rule.discount?.type === "bulk"
+    )?.discount?.requiredQuantity;
+    if (requiredQuantity && bulkItemCount >= requiredQuantity) {
       totalPrice -=
         bulkItemCount *
         (this.pricingRules.find((rule) => rule.discount?.type === "bulk")
@@ -105,7 +104,8 @@ class Checkout {
 
     // Apply bulk discount if applicable
     if (bulkItemCount !== 0) {
-      if (bulkItemCount === bulkItems[0].discount?.requiredQuantity) {
+      const requiredQuantity = bulkItems[0].discount?.requiredQuantity;
+      if (requiredQuantity && bulkItemCount >= requiredQuantity) {
         for (let index = 0; index < bulkItemCount; index++) {
           totalPrice += bulkItems[index].discount?.discountedPrice!!;
         }
